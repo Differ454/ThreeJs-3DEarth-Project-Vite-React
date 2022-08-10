@@ -5,7 +5,6 @@ import vertexShader from './shaders/vertex.glsl'
 import fragmentShader from './shaders/fragment.glsl'
 import atmosphereVertexShader from './shaders/atmosphereVertex.glsl'
 import atmosphereFragmentShader from './shaders/atmosphereFragment.glsl'
-const texture = new THREE.TextureLoader().load('./img/globe.jpg');
 
 
 //console.log(vertexShader);
@@ -39,7 +38,7 @@ const sphere = new THREE.Mesh(
      fragmentShader,
      uniforms: {
       globeTexture: {
-        value: texture
+        value: new THREE.TextureLoader().load('./img/globe.jpg')
       }
      }
 
