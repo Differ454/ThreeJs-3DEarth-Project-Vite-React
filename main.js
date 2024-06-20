@@ -65,7 +65,8 @@ scene.add(atmosphere);
 
 const group = new THREE.Group()
 group.add(sphere)
-scene.add(group)
+//scene.add(group)
+scene.add(sphere);
 //console.log(atmosphere );
 
 const starGeometry = new THREE.BufferGeometry()
@@ -98,7 +99,7 @@ const mouse = {
 const animate = () => {
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
-  sphere.rotation.y += 0.003
+  sphere.rotation.y += 0.002
     gsap.to(group.rotation, {
       x: -mouse.y * 0.5,
       y: mouse.x * 1.4,
